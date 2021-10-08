@@ -31,7 +31,7 @@ export class Search extends Component {
                     <input className='border-2 mb-4 mt-4' type="text" name="text" placeholder="Search Users..." value={this.state.text} onChange={this.onChange}></input>
                     <input className='text-white bg-gray-600 mb-2 border-2 p-1 cursor-pointer hover:bg-gray-200 hover:text-black' type="submit" value="Search"></input>
                 </form>
-                {this.props.clearable && (<button className=' bg-gray-200 mb-2 align-middle border-2 p-1 border-gray-600 hover:bg-gray-700 hover:text-white' onClick={this.props.clear}>Clear</button>)}
+                {this.props.clearable && (<button className='text-white bg-gray-600 mb-2 align-middle border-2 p-1 hover:bg-gray-200 hover:text-black' onClick={this.props.clear}>Clear</button>)}
             </div>
         )
     }

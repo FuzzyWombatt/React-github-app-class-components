@@ -11,7 +11,7 @@ const UserItem = ({user: {login, avatar_url,html_url}}) => {
             />
             <h3 className='mb-2'>{login}</h3>
             <div className='mb-6'>
-                <a className='bg-gray-600 pt-1 pb-1 pr-6 pl-6 text-center text-white border-2' href={html_url}>
+                <a className='bg-gray-600 pt-1 pb-1 pr-6 pl-6 text-center text-white border-2 hover:bg-gray-200 hover:text-black' href={html_url}>
                     More
                 </a>
             </div>
