@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-export const Alert = ({alert}) => {
+const Alert = ({alert}) => {
     return (
         alert !== null && (
             <div className={`self-center bg-${alert.type} pt-2 pb-2 pl-2 text-left w-11/12 text-gray-600`}>
@@ -11,3 +11,5 @@ export const Alert = ({alert}) => {
         )
     )
 }
+
+export default Alert
