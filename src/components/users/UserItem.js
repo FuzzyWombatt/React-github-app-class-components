@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
-const UserItem = ({user: {login, avatar_url,html_url}}) => {
+const UserItem = ({user: {login, avatar_url}}) => {
     return(
         <div className='flex flex-col items-center border-2'>
             <img
@@ -21,7 +21,7 @@ const UserItem = ({user: {login, avatar_url,html_url}}) => {
 }
 
 UserItem.propTypes = {
-    users: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
 }
 
 export default UserItem

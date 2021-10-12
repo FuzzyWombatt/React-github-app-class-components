@@ -6,6 +6,7 @@ import Search from './components/users/Search'
 import Alert from './components/layout/Alert';
 import About from './components/pages/About';
 import User from './components/users/User';
+import Footer from './components/layout/Footer';
 import axios from 'axios'
 
 
@@ -81,6 +82,7 @@ class App extends Component{
                             )} />
                         </Switch> 
                     </div>
+                    <Footer/>
                 </div>
             </div>
         </Router>
