@@ -48,27 +48,25 @@ export class User extends Component {
            <Fragment>
                <div className='h-screen w-11/12 self-center'>
                     <div className='flex mb-2'>
-                        <Link to='/' className='w-1/8 bg-gray-600 pt-1 pb-1 pr-6 pl-6 text-center text-white border-2 hover:bg-gray-200 hover:text-black'>
-                            Back
+                        <Link to='/' className='w-1/8 bg-gray-600 mr-2 pt-1 pb-1 pr-6 pl-6 text-center text-white border-2 hover:bg-gray-200 hover:text-black'>
+                            Back to search
                         </Link>
-                        <div>
+                        <div className='self-center'>
                             Hireable: {' '}
                             {hireable ? <FontAwesomeIcon icon={faCheck} className='text-green-700'/> : <FontAwesomeIcon icon={faTimesCircle} className='text-red-800'/>}
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 border-2 '>
+                    <div className='grid grid-cols-2 border-2 mb-2'>
                         <div className='flex flex-col items-center text-center content-center justify-center'>
-                            <img src={avatar_url} alt='' className='rounded-full w-150'/>
+                            <img src={avatar_url} alt='' className='rounded-full w-150 mt-4 mb-2'/>
                             <h1>{name}</h1>
-                            <p>Location: {location}</p>
+                            <p className='mb-2'>Location: {location}</p>
                         </div>
                         <div>
-                            {bio && (<Fragment>
-                                <h3>Bio</h3>
-                                <p>{bio}</p>
-                            </Fragment>)}
-                            <a href={html_url} className='text-white bg-gray-600 mb-2 align-middle border-2 p-1 hover:bg-gray-200 hover:text-black'>Visit Github Profile</a>
-                            <ul>
+                            <h3 className='mt-4'><strong><u>Bio</u></strong></h3>
+                            {bio ? (<Fragment><p className='mt-2 mb-2'>{bio}</p></Fragment>) : ((<Fragment><p className='mt-2 mb-2'>No Bio Provided</p></Fragment>))}
+                            <a href={html_url} className='mt-2 text-white bg-gray-600 mb-2 align-middle border-2 p-1 hover:bg-gray-200 hover:text-black'>Visit Github Profile</a>
+                            <ul className='mt-2 mb-2'>
                                 <li>
                                     {login && (<Fragment>
                                         <strong>Username: </strong>{login}
@@ -87,11 +85,11 @@ export class User extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className='border-2 flex flex-row justify-center'>
-                        <div className='m-1 pr-2 pl-2'>Followers: {followers}</div>
-                        <div className='m-1 pr-2 pl-2'>Following: {following}</div>    
-                        <div className='m-1 pr-2 pl-2'>Public Repos: {public_repos}</div>    
-                        <div className='m-1 pr-2 pl-2'>Public Gists: {public_gists}</div>                                             
+                    <div className='border-2 flex flex-row justify-center pt-2 pb-2 mb-2'>
+                        <div className='badge bg-red-700 text-white'>Followers: {followers}</div>
+                        <div className='badge bg-green-700 text-white'>Following: {following}</div>    
+                        <div className='badge bg-pink-600 text-white'>Public Repos: {public_repos}</div>    
+                        <div className='badge bg-gray-700 text-white'>Public Gists: {public_gists}</div>                                             
                     </div>
                     <Repos repos={repos}/>
                 </div>

@@ -14,10 +14,10 @@ const Navbar = ({icon, title}) => {
             </h1>
             <ul className='flex flex-row flex-1 justify-end'>
                 <li className='self-center m-2'>
-                    <Link to='/'>Home</Link>
+                    <Link className='hover:text-gray-300' to='/'>Home</Link>
                 </li>
                 <li className='self-center m-2'>
-                    <Link to='/about'>About</Link>
+                    <Link className='hover:text-gray-300' to='/about'>About</Link>
                 </li>
             </ul>
         </nav>

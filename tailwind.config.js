@@ -6,6 +6,9 @@ module.exports = {
       width: {
         '1/8' : '12.5%',
         '150' : '150px',
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif']
       }
     },
   },

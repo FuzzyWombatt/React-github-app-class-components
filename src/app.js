@@ -67,7 +67,7 @@ class App extends Component{
 
         return(
         <Router>
-            <div>
+            <div className='font-roboto'>
                 <div>
                     <Navbar />
                     <div className='flex flex-col'>
